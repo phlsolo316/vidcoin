@@ -1,0 +1,33 @@
+# /etc/conf.d/vidcoind: config file for /etc/init.d/vidcoind
+
+# Config file location
+#VIDCOIND_CONFIGFILE="/etc/vidcoin/vidcoin.conf"
+
+# What directory to write pidfile to?  (created and owned by $VIDCOIND_USER)
+#VIDCOIND_PIDDIR="/var/run/vidcoind"
+
+# What filename to give the pidfile
+#VIDCOIND_PIDFILE="${VIDCOIND_PIDDIR}/vidcoind.pid"
+
+# Where to write vidcoind data (be mindful that the blockchain is large)
+#VIDCOIND_DATADIR="/var/lib/vidcoind"
+
+# User and group to own vidcoind process
+#VIDCOIND_USER="vidcoin"
+#VIDCOIND_GROUP="vidcoin"
+
+# Path to vidcoind executable
+#VIDCOIND_BIN="/usr/bin/vidcoind"
+
+# Nice value to run vidcoind under
+#VIDCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+#VIDCOIND_OPTS=""
+
+# The timeout in seconds OpenRC will wait for vidcoind to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+VIDCOIND_SIGTERM_TIMEOUT=600
